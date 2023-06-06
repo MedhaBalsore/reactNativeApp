@@ -4,8 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
 // import screens from folders
-import React from 'react'
+import React from 'react';
 import All from './screens/All';
 import Business from './screens/Business';
 import Health from './screens/Health';
@@ -24,6 +25,9 @@ const Tab = createBottomTabNavigator();
 
 
 export default function App() {
+  
+
+   
   return (
     <>
     
@@ -78,6 +82,12 @@ export default function App() {
       <Tab.Screen name={SportsName} component={Sports} />
     </Tab.Navigator>
    </NavigationContainer>
+
+
+
+
+
+
    </>
   );
 }
