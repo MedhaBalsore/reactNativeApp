@@ -1,0 +1,84 @@
+<Tab.Screen name="All"  component={All} />
+import All from './screens/All';
+
+
+////////////////////////////////
+
+    <Tab.Navigator>
+      <Tab.Screen name="Business" component={Business}
+          options={{
+               tabBarIcon: (props) => (
+                <Icon type='feather' name='home' color={props.color} />
+              ),
+          }} />
+      <Tab.Screen name="All" component={All} 
+         options={{
+               tabBarIcon: (props) => (
+                <Icon type='feather' name='star' color={props.color} />
+              ),
+          }} />
+      <Tab.Screen name="Health" component={Health} 
+        options={{
+               tabBarIcon: (props) => (
+                <Icon type='evilicon' name='heart' color={props.color} />
+              ),
+          }}
+      />
+      <Tab.Screen name="Tech" component={Tech} 
+        options={{
+               tabBarIcon: (props) => (
+                <Icon type='feather' name='slack' color={props.color} />
+              ),
+          }}
+      />
+      <Tab.Screen name="Sports" component={Sports} 
+        options={{
+               tabBarIcon: (props) => (
+                <Icon type='foundation' name='star' color={props.color} />
+              ),
+          }}
+      />
+    </Tab.Navigator>
+
+
+    ///////////////////
+
+
+
+
+
+    <Tab.Screen name={SportsName} component={Sports} 
+        options={{
+               tabBarIcon: (props) => (
+                <Icon type='foundation' name='star' color={props.color} />
+              ),
+          }}
+      />
+
+      ///////////////////////
+      *
+initialRouteName={AllName}
+screenOptions={({route})=> ({
+     tabBarIcon: ({focused,color,size}) => {
+        let iconName;
+        let rn = route.name;
+        if(rn === AllName){
+          iconName = focused ? 'star' : 'star-outline'
+        } else if(rn === BusinessName){
+          iconName = focused ? 'home' : 'home-outline'
+        } else if(rn === HealthName){
+          iconName = focused ? 'heart' : 'heart-outline'
+        } else if(rn === TechName){
+          iconName = focused ? 'slack' : 'slack-outline'
+        } else if(rn === SportsName){
+          iconName = focused ? 'star' : 'star-outline'
+        }
+        
+        return <Ionicons name={iconName} size={size} color={color} />
+
+     },
+})
+
+
+}
+*/
