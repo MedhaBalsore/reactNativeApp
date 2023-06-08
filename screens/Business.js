@@ -1,12 +1,34 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {StyleSheet, View, Text } from 'react-native';
+import MapView from 'react-native-maps';
 
-const Business = () => {
+export default function Business  ()  {
   return (
-    <View>
-      <Text>Business Screen this is a test on the screen business</Text>
+    <View style={styles.container}>
+      <MapView style={styles.map} />
     </View>
   );
+
+  // state = {
+  //   markers: [
+  //     {
+  //       coordinate: {
+  //         latitude:20.3484,
+  //         longitude: 57.5522
+  //       }
+
+  //     }
+     
+
+  //   ]
+
+  // }
 };
 
-export default Business;
+const styles = StyleSheet.create({
+  map: {
+    width: '100%',
+    height: '100%',
+  },
+ 
+});

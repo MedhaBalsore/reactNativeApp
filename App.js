@@ -11,6 +11,8 @@ import Business from './screens/Business';
 import Health from './screens/Health';
 import Sports from './screens/Sports';
 import Tech from './screens/Tech';
+// import MapView from 'react-native-maps';
+
 
 // define the component names as constant
 const AllName = 'All';
@@ -26,7 +28,10 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <>
-    
+     {/* <View style={styles.container}>
+      <MapView style={styles.map} />
+    </View> */}
+
     <NavigationContainer>
     <Tab.Navigator 
     initialRouteName={AllName}
@@ -79,6 +84,8 @@ export default function App() {
     </Tab.Navigator>
    </NavigationContainer>
    </>
+
+   
   );
 }
 
@@ -88,8 +95,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
+  // map: {
+  //   width: '100%',
+  //   height: '100%',
+  // },
+ 
 });
 
 
