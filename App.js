@@ -11,7 +11,8 @@ import All from './screens/All';
 import Business from './screens/Business';
 import Health from './screens/Health';
 import Sports from './screens/Sports';
-import Tech from './screens/Tech';
+import Tech from './screens/Tech'
+import CheckLogin from './screens/checkLogin';
 
 // define the component names as constant
 const AllName = 'All';
@@ -19,7 +20,7 @@ const BusinessName = 'Business';
 const SportsName = 'Sports';
 const HealthName = 'Health';
 const TechName = 'Tech';
-
+const Log = 'CheckLogin';
 
 const Tab = createBottomTabNavigator();
 
@@ -47,6 +48,8 @@ export default function App() {
         } else if(rn === TechName){
           iconName = focused ? 'cloud' : 'cloud-outline'
         } else if(rn === SportsName){
+          iconName = focused ? 'baseball' : 'baseball-outline'
+        } else if(rn === Log){
           iconName = focused ? 'baseball' : 'baseball-outline'
         }
         
@@ -80,6 +83,7 @@ export default function App() {
       <Tab.Screen name={HealthName} component={Health}/>
       <Tab.Screen name={TechName} component={Tech} />
       <Tab.Screen name={SportsName} component={Sports} />
+      <Tab.Screen name={Log} component={CheckLogin} />
     </Tab.Navigator>
    </NavigationContainer>
 
@@ -101,8 +105,6 @@ const styles = StyleSheet.create({
     
   },
 });
-
-
 
 function MyTabs() {
   return (

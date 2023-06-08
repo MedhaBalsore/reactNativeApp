@@ -97,3 +97,34 @@ screenOptions={({route})=> ({
     "assetBundlePatterns": [
       "**/*"
     ],
+
+
+
+
+
+          <TextInput value={username} onChangeText={(username) => {setName(username)}} placeholder="Username" style={styles.textBoxes}></TextInput>
+      <TextInput value={email} onChangeText={(email) => {setEmail(email)}} placeholder="E-mail" style={styles.textBoxes}></TextInput>
+      <TextInput value='' placeholder="Email" ></TextInput>
+      <button onClick={create}></button>
+
+
+
+      // function create sends data to the firebase database
+  function verify (){
+try {
+    const docum = doc(db, "users", "L2");
+    getDoc(docum)
+    .then((doc) => {
+        console.log(doc.data(),doc.id)
+       const details = doc.data();
+
+
+    })
+}catch(error){
+    console.log(error)
+}
+    
+
+  }
+
+  <Button title="submit" onPress={verify} />
