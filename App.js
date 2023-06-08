@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 // import screens from folders
 import React from 'react'
-import All from './screens/All';
+import All from './screens/FirstAid';
 import Business from './screens/Business';
 import Health from './screens/Health';
 import Sports from './screens/Sports';
