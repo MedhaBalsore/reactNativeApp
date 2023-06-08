@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Button, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-
-
 import { useEffect, useRef, useState } from 'react';
 import {Camera} from 'expo-camera'
 import { shareAsynch } from 'expo-sharing';
