@@ -1,27 +1,34 @@
 import React from 'react';
-import {SafeAreaView, TextInput, StyleSheet} from 'react-native';
+import {StyleSheet, View, Text } from 'react-native';
+import MapView from 'react-native-maps';
 
-export default function Business() {
+export default function Business  ()  {
   return (
-    <SafeAreaView style={{ flex: 1, marginHorizontal: 20 }}>
-      <TextInput
-        placeholder="Search"
-        clearButtonMode="always"
-        style={styles.searchBox}
-        autoCapitalize="none"
-        autoCorrect={false}
-      />
-    </SafeAreaView>
-
+    <View style={styles.container}>
+      <MapView style={styles.map} />
+    </View>
   );
+
+  // state = {
+  //   markers: [
+  //     {
+  //       coordinate: {
+  //         latitude:20.3484,
+  //         longitude: 57.5522
+  //       }
+
+  //     }
+     
+
+  //   ]
+
+  // }
 };
 
 const styles = StyleSheet.create({
-  searchBox: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderColor: '#ccc',
-    boderWidth: 1,
-    borderRadius: 8,
+  map: {
+    width: '100%',
+    height: '100%',
   },
+ 
 });
